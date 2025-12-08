@@ -26,7 +26,7 @@ export default function Navigation() {
             </Link>
             <Link
               href="/projects"
-              className="text-m text-(--primary) hover:var(--primary-dark) transition-colors"
+              className="text-m text-(--primary) hover:text-(--primary-dark) transition-colors"
             >
               Projects
             </Link>
