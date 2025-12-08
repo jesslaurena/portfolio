@@ -11,7 +11,7 @@ export default function Navigation() {
           {/* Logo/Name */}
           <Link
             href="/"
-            className="text-2xl font-bold text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors"
+            className="text-2xl font-bold text-(--primary) hover:text-(--primary-dark) transition-colors"
           >
             Jess Anderson
           </Link>
@@ -20,19 +20,19 @@ export default function Navigation() {
           <div className="flex items-center space-x-8">
             <Link
               href="/about"
-              className="text-m text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors"
+              className="text-m text-(--primary) hover:text-(--primary-dark) transition-colors"
             >
               About
             </Link>
             <Link
               href="/projects"
-              className="text-m text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors"
+              className="text-m text-(--primary) hover:var(--primary-dark) transition-colors"
             >
               Projects
             </Link>
             <Link
               href="/contact"
-              className="text-m text-[var(--primary)] hover:text-[var(--primary-dark)] transition-colors"
+              className="text-m text-(--primary) hover:text-(--primary-dark) transition-colors"
             >
               Contact
             </Link>
