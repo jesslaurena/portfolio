@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Navigation() {
   return (
@@ -8,13 +9,22 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center h-16">
           
-          {/* Logo/Name */}
-          <Link
-            href="/"
-            className="text-2xl font-bold text-(--primary) hover:text-(--primary-dark) transition-colors"
-          >
-            Jess Anderson
-          </Link>
+          {/* Logo/Name and Social Icons */}
+          <div className="flex items-center space-x-2">
+
+            <Link
+              href="/"
+              className="text-2xl font-bold text-(--primary) hover:text-(--primary-dark) transition-colors">
+              Jess Anderson
+            </Link>
+            <Link href="https://www.linkedin.com/in/jessanderrson" target="_blank">
+              <FaLinkedin className="w-6 h-6 text-(--primary) hover:text-(--primary-dark) transition-colors" />
+            </Link>
+            <Link href="https://github.com/jesslaurena" target="_blank">
+              <FaGithub className="w-6 h-6 text-(--primary) hover:text-(--primary-dark) transition-colors" />
+            </Link>
+
+          </div>
 
           {/* Navigation Links */}
           <div className="flex items-center space-x-8">
