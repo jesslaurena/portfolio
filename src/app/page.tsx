@@ -43,8 +43,8 @@ export default function Home() {
                   className="object-contain p-1"
                 />
               </div>
-              <p className="text-lg font-medium text-(--text)">
-                UF Computer Science Student, Dec. 2027
+              <p className="text-2xl font-medium text-(--text)">
+                UF Computer Science, Dec. 2027
               </p>
             </div>
 
@@ -59,7 +59,7 @@ export default function Home() {
                   className="object-contain p-1"
                 />
               </div>
-              <p className="text-lg font-medium text-(--text)">
+              <p className="text-2xl font-medium text-(--text)">
                 Full Stack Web &amp; App Developer
               </p>
             </div>
@@ -75,7 +75,7 @@ export default function Home() {
                   className="object-contain p-1"
                 />
               </div>
-              <p className="text-lg font-medium text-(--text)">
+              <p className="text-2xl font-medium text-(--text)">
                 UI/UX Engineer
               </p>
             </div>
