@@ -6,7 +6,7 @@ export default function Navigation() {
     <nav 
       className="fixed top-3 left-0 right-0 z-50 backdrop-blur-md"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="w-full mx-auto px-16">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo/Name and Social Icons */}
