@@ -4,26 +4,51 @@ import BackgroundLines from "@/components/BackgroundLines";
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen flex items-start justify-center pt-16 md:pt-46 pb-16">
+    <main className="relative min-h-screen flex items-start justify-center pt-14 md:pt-44 pb-16">
+
       <BackgroundLines />
 
-      <div className="relative w-full max-w-6xl flex flex-col gap-10 px-6 md:flex-row md:items-center md:gap-16">
+      <div className="relative w-full max-w-7xl flex flex-col gap-10 px-6 md:flex-row md:items-center md:gap-16">
         {/* Left: Headshot */}
         <div className="flex justify-center md:justify-start">
-          <div className="ml-8 relative aspect-square w-64 overflow-hidden rounded-[32px] shadow-md md:w-90">
+          <div className="ml-8 relative aspect-square w-72 overflow-hidden md:w-96">
+
+            {/* Headshot (base layer) */}
             <Image
-              src="/headshot.jpg"
+              src="/headshot-1.png"
               alt="Portrait of Jess Anderson"
               fill
               priority
-              sizes="(min-width: 1024px) 20rem, 16rem"
-              className="object-cover"
+              sizes="(min-width: 1024px) 24rem, 18rem"
+              className="object-cover pop-up"
             />
+
+            {/* Top-left tape */}
+            <Image
+              src="/headshot-2.png"
+              alt=""
+              width={300}
+              height={300}
+              className="absolute top-0 left-0 z-10 tape-swipe opacity-0"
+            />
+
+            {/* Bottom-right tape */}
+            <Image
+              src="/headshot-3.png"
+              alt=""
+              width={300}
+              height={300}
+              className="absolute bottom-0 right-0 z-10 tape-swipe tape-delay opacity-0"
+            />
+
+
           </div>
         </div>
 
+
+
         {/* Right: Text content */}
-        <div className="flex-1 mr-16">
+        <div className="flex-1 mr-16 pop-up">
           <h1
             className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl"
             style={{ color: primaryDark }}

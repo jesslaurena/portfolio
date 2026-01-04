@@ -20,3 +20,52 @@ body {
   color: var(--foreground);
   font-family: var(--font-dm-sans), Arial, Helvetica, sans-serif;
 }
+
+@keyframes slideTapeTopLeft {
+  from {
+    transform: translate(-60%, -60%);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-30%, -30%);
+    opacity: 1;
+  }
+}
+
+@keyframes tapeSwipe {
+  0% {
+    clip-path: inset(0 100% 0 0);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    clip-path: inset(0 0 0 0);
+    opacity: 1;
+  }
+}
+
+.tape-swipe {
+  animation: tapeSwipe 1s ease-out forwards;
+  animation-delay: 1s; /* after headshot pop */
+}
+
+.tape-delay {
+  animation-delay: 1.15s; /* stagger bottom-right tape */
+}
+
+@keyframes popUp {
+  0% {
+    transform: scale(0.96);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.pop-up {
+  animation: popUp 1s ease-out forwards;
+}

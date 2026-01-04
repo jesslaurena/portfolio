@@ -4,9 +4,9 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 export default function Navigation() {
   return (
     <nav 
-      className="fixed top-3 left-0 right-0 z-50 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50"
     >
-      <div className="w-full mx-auto px-16">
+      <div className="w-full mx-auto px-16 py-2">
         <div className="flex justify-between items-center h-16">
           
           {/* Logo/Name and Social Icons */}

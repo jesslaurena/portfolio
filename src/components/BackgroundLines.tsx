@@ -1,85 +1,20 @@
 export default function BackgroundLines() {
   return (
-    <div className="pointer-events-none absolute inset-0 -z-1 overflow-hidden">
-      {/* Middle line - left segment */}
-      <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "30%",
-          top: "30%",
-          left: "0%",
-          transform: "rotate(20deg)",
-          transformOrigin: "left top",
-        }}
-      />
+    <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
       
-      {/* Middle line - right segment */}
-      <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "75%",
-          top: "25%",
-          right: "0%",
-          transform: "rotate(-10deg)",
-          transformOrigin: "right top",
-        }}
-      />
-
-        {/* Bottom line - left segment */}
-        <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "30%",
-          top: "35%",
-          left: "0%",
-          transform: "rotate(20deg)",
-          transformOrigin: "left top",
-        }}
-      />
-      
-      {/* Bottom line - right segment */}
-      <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "75%",
-          top: "30%",
-          right: "0%",
-          transform: "rotate(-10deg)",
-          transformOrigin: "right top",
-        }}
-      />
-
-      {/* Top line - left segment */}
-      <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "30%",
-          top: "25%",
-          left: "0%",
-          transform: "rotate(20deg)",
-          transformOrigin: "left top",
-        }}
-      />
-      
-      {/* Top line - right segment */}
-      <div
-        className="absolute h-2 rounded-full"
-        style={{
-          backgroundColor: "var(--primary-light)",
-          width: "75%",
-          top: "20%",
-          right: "0%",
-          transform: "rotate(-10deg)",
-          transformOrigin: "right top",
-        }}
-      />
+      <svg
+        className="absolute inset-0 w-full h-full"
+        viewBox="0 0 100 100"
+        preserveAspectRatio="none"
+      >
+        <path d="M0,66 C25,50 75,20 100,0"
+          fill="none" stroke="var(--primary)" strokeWidth="2.5" strokeLinecap="round" opacity="0.6" vectorEffect="non-scaling-stroke" />
+        <path d="M0,68 C30,52 70,22 100,2"
+          fill="none" stroke="var(--primary)" strokeWidth="2" strokeLinecap="round" opacity="0.5" vectorEffect="non-scaling-stroke" />
+        <path d="M0,64 C20,48 80,18 100,0"
+          fill="none" stroke="var(--primary)" strokeWidth="3" strokeLinecap="round" opacity="0.4" vectorEffect="non-scaling-stroke" />
+      </svg>
 
     </div>
   );
 }
-
