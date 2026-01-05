@@ -1,10 +1,10 @@
 "use client"
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import { primaryDark } from "@/constants/colors";
 import BackgroundLines from "@/components/BackgroundLines";
 
-export default function ContactForm() {
+function ContactFormContent() {
   const [result, setResult] = useState("");
   const [redirectUrl, setRedirectUrl] = useState("");
   const searchParams = useSearchParams();
@@ -31,9 +31,7 @@ export default function ContactForm() {
   }, [searchParams]);
 
   return (
-    <main className="relative min-h-screen flex items-start justify-center pt-8 md:pt-32 pb-16">
-      <BackgroundLines />
-
+    <>
       <div className="relative w-full max-w-3xl flex flex-col gap-10 px-6 pop-up">
         <div>
           <h1
@@ -142,6 +140,35 @@ export default function ContactForm() {
           )}
         </form>
       </div>
+    </>
+  );
+}
+
+export default function ContactForm() {
+  return (
+    <main className="relative min-h-screen flex items-start justify-center pt-8 md:pt-32 pb-16">
+      <BackgroundLines />
+
+      <Suspense fallback={
+        <div className="relative w-full max-w-3xl flex flex-col gap-10 px-6 pop-up">
+          <div>
+            <h1
+              className="text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6"
+              style={{ color: primaryDark }}
+            >
+              Get In Touch
+            </h1>
+            <p className="text-xl font-medium text-(--text) leading-relaxed">
+              Have a question or want to work together? Send me a message!
+            </p>
+            <p>
+              Or email me at <a href="mailto:jessanderrson@gmail.com">jessanderrson@gmail.com</a>
+            </p>
+          </div>
+        </div>
+      }>
+        <ContactFormContent />
+      </Suspense>
     </main>
   );
 }
